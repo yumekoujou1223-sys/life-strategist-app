@@ -18,7 +18,7 @@ def initialize_gemini(api_key=None):
         raise ValueError("GEMINI_API_KEY が設定されていません")
     
     genai.configure(api_key=api_key)
-    return genai.GenerativeModel('gemini-2.0-flash-exp')
+    return genai.GenerativeModel('gemini-2.5-flash-exp')
 
 def create_analysis_prompt(user_name, birth_date, numerology_data, kigaku_data):
     """
