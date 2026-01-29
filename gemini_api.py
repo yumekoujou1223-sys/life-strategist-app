@@ -7,9 +7,10 @@ Gemini API連携モジュール
 import os
 import google.generativeai as genai
 
-def initialize_gemini(api_key=None):
+def initialize_gemini(api_key=None, model_name=None):
     """
     Gemini APIを初期化
+    モデル名は環境変数または引数で指定可能
     """
     if api_key is None:
         api_key = os.environ.get('GEMINI_API_KEY')
@@ -18,7 +19,12 @@ def initialize_gemini(api_key=None):
         raise ValueError("GEMINI_API_KEY が設定されていません")
     
     genai.configure(api_key=api_key)
-    return genai.GenerativeModel('gemini-2.5-flash-exp')
+    
+    # モデル名の決定（優先順位：引数 > 環境変数 > デフォルト）
+    if model_name is None:
+        model_name = os.environ.get('GEMINI_MODEL', 'gemini-1.5-flash')
+    
+    return genai.GenerativeModel(model_name)
 
 def create_analysis_prompt(user_name, birth_date, numerology_data, kigaku_data):
     """
