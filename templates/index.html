@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ハイブリッド・ライフストラテジスト | 人生戦略診断</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <!-- Step 1: ウェルカム画面 -->
+    <div id="step-welcome" class="step active">
+        <div class="container">
+            <header class="hero">
+                <h1 class="logo">⚡ HYBRID LIFE STRATEGIST</h1>
+                <p class="tagline">数秘術 × 九星気学で導く、あなただけの人生戦略</p>
+            </header>
+            
+            <div class="intro-section">
+                <h2>人生を好転させる行動指針</h2>
+                <p class="intro-text">
+                    西洋の論理的体系「数秘術」と東洋の動的環境学「九星気学」を融合。<br>
+                    あなたの内面的な資質と、今の時流を統合分析し、<br>
+                    最短距離で成功するための具体的な戦略を提示します。
+                </p>
+                
+                <div class="features">
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3>本質的資質</h3>
+                        <p>あなたの才能と性格を深層分析</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🚀</div>
+                        <h3>行動戦略</h3>
+                        <p>最適な振る舞いと対人関係の攻略法</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⏰</div>
+                        <h3>時流とタイミング</h3>
+                        <p>今やるべきこと、避けるべきこと</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h2>あなたの人生戦略を診断</h2>
+                <form id="input-form">
+                    <div class="form-group">
+                        <label for="name">お名前（ローマ字）<span class="required">*</span></label>
+                        <input type="text" id="name" name="name" placeholder="例: Taro Yamada" required>
+                        <small>※ 旧姓がある場合は旧姓を推奨</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="birth-date">生年月日<span class="required">*</span></label>
+                        <input type="date" id="birth-date" name="birth_date" required>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">戦略分析を開始</button>
+                </form>
+            </div>
+            
+            <footer class="app-footer">
+                <p>© 2026 Hybrid Life Strategist | 完全無料・登録不要</p>
+            </footer>
+        </div>
+    </div>
+    
+    <!-- Step 2: ローディング画面 -->
+    <div id="step-loading" class="step">
+        <div class="container loading-container">
+            <div class="loading-animation">
+                <div class="spinner"></div>
+            </div>
+            <h2 class="loading-title">戦略分析中...</h2>
+            <p class="loading-text">あなたの数秘術プロファイルと九星気学を統合分析しています</p>
+            <div class="progress-steps">
+                <div class="progress-step active">
+                    <span class="step-number">1</span>
+                    <span class="step-label">数秘術計算</span>
+                </div>
+                <div class="progress-step">
+                    <span class="step-number">2</span>
+                    <span class="step-label">九星気学分析</span>
+                </div>
+                <div class="progress-step">
+                    <span class="step-number">3</span>
+                    <span class="step-label">戦略策定</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Step 3: 結果表示画面 -->
+    <div id="step-result" class="step">
+        <div class="container result-container">
+            <header class="result-header">
+                <h1 class="logo-small">⚡ HYBRID LIFE STRATEGIST</h1>
+                <button id="btn-restart" class="btn-secondary">新しく診断する</button>
+            </header>
+            
+            <div id="result-content" class="result-content">
+                <!-- ここに結果が動的に挿入されます -->
+            </div>
+            
+            <div class="upgrade-cta">
+                <div class="cta-content">
+                    <h3>🔒 さらに深い分析が必要ですか？</h3>
+                    <p>会員登録で、詳細な月間・週間の行動指針や、相性診断など、より深い戦略分析が可能になります。</p>
+                    <button class="btn-cta" disabled>会員登録（近日公開）</button>
+                </div>
+            </div>
+            
+            <footer class="app-footer">
+                <p>© 2026 Hybrid Life Strategist</p>
+            </footer>
+        </div>
+    </div>
+    
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
