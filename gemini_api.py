@@ -22,7 +22,7 @@ def initialize_gemini(api_key=None, model_name=None):
     
     # モデル名の決定（優先順位：引数 > 環境変数 > デフォルト）
     if model_name is None:
-        model_name = os.environ.get('GEMINI_MODEL', 'gemini-1.5-flash')
+        model_name = os.environ.get('GEMINI_MODEL', 'gemini-3.0-flash')
     
     return genai.GenerativeModel(model_name)
 
